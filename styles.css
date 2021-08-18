@@ -1,0 +1,119 @@
+/* Глобальные стили */
+
+body {
+    font-family: 'arial', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+}
+
+.button-section__back-pers {
+    perspective: 1000px;
+}
+
+.button-section {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.back-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.button-section__btn {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 248, 246, 0.6);
+    font-size: 20px;
+    transform-style: preserve-3d;
+    box-shadow: inset 4px 4px 0px 0px rgba(167, 209, 206, 0.6);
+    transform: rotateX(0deg) rotateY(0deg);
+    border-radius: 5px;
+}
+
+.button-section__btn:hover::before {
+    transform: skew(-20deg) translateX(200px);
+}
+
+.button-section__btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 20px;
+    height: 120px;
+    transition: transform 0.3s ease;
+    transform: skew(-20deg) translateX(-50px);
+}
+
+
+.button-section__btn-back-positon {
+    transition: transform 0.5s ease;
+    transform: rotateX(0deg) rotateY(0deg);
+}
