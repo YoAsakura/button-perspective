@@ -75,6 +75,7 @@ align-items: center;
     top: 0;
     left: 0;
     object-fit: cover;
+    background-color: #c2ad14;
 }
 
 .button-section__btn {
